@@ -2,8 +2,6 @@
   color: #f3edff;
   background: #080718;
   font-family: "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
-  --card-safe-width: clamp(320px, 34vw, 680px);
-  --card-safe-height: min(90dvh, 900px);
 }
 
 * { box-sizing: border-box; }
@@ -72,25 +70,7 @@ button { font: inherit; }
   isolation: isolate;
 }
 
-.viewer::after {
-  position: fixed;
-  z-index: 2;
-  inset: 0;
-  content: "";
-  pointer-events: none;
-  background: url("./assets/violet-starfield.png") center / cover no-repeat;
-  opacity: .98;
-  -webkit-mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
-  -webkit-mask-size: 100% 100%, var(--card-safe-width) var(--card-safe-height);
-  -webkit-mask-position: center, center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-composite: xor;
-  mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
-  mask-size: 100% 100%, var(--card-safe-width) var(--card-safe-height);
-  mask-position: center, center;
-  mask-repeat: no-repeat;
-  mask-composite: exclude;
-}
+.viewer::after { display: none; }
 
 .frame-wrap {
   position: relative;
@@ -219,10 +199,6 @@ button { font: inherit; }
     border-radius: 16px;
     font-size: 23px;
     opacity: .96;
-  }
-  .viewer::after {
-    -webkit-mask-size: 100% 100%, min(82vw, 420px) min(88dvh, 760px);
-    mask-size: 100% 100%, min(82vw, 420px) min(88dvh, 760px);
   }
   .navigation-previous { left: 10px; }
   .navigation-next { right: 10px; }

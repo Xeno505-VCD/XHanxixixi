@@ -2,19 +2,19 @@
   'use strict';
 
   const cards = [
-    { id: 'leo-pizza', title: '狮子座生日披萨', mode: 'holo', src: '../output/leo-birthday-pizza/web/index.html?rev=20260913-gallery' },
-    { id: 'eren', title: '艾伦少年 ⇄ 青年', mode: 'lenticular', src: '../output/eren-youth-adult-lenticular/web/index.html?rev=20260913-minimal' },
-    { id: 'jotaro', title: '承太郎四景', mode: 'lenticular', src: '../output/jotaro-four-view-lenticular/web/index.html' },
-    { id: 'tokyo-ghoul', title: '东京喰种三相', mode: 'lenticular', src: '../output/tokyo-ghoul-triad-lenticular/web/index.html?rev=20260913-minimal' },
-    { id: 'gojo-geto', title: '五条 ⇄ 夏油', mode: 'lenticular', src: '../output/gojo-geto-lenticular/web/index.html?rev=20260913-minimal' },
-    { id: 'giyu-muichiro', title: '义勇 ⇄ 无一郎', mode: 'lenticular', src: '../output/giyu-muichiro-lenticular/web/index.html?rev=20260913-minimal' },
-    { id: 'tanjiro', title: '炭治郎三息', mode: 'lenticular', src: '../output/tanjiro-triad-lenticular/web/index.html?rev=20260913-minimal' },
-    { id: 'zenitsu', title: '善逸', mode: 'holo', src: '../output/zenitsu-thunderclap-holo/web/index.html?rev=20260913-showcase2' },
-    { id: 'inosuke', title: '伊之助', mode: 'holo', src: '../output/inosuke-ruic-holo/web/index.html?rev=20260913-showcase2' },
-    { id: 'kanao', title: '香奈乎', mode: 'holo', src: '../output/kanao-flower-breathing-holo/web/index.html?rev=20260914-separator' },
-    { id: 'nezuko', title: '祢豆子', mode: 'holo', src: '../output/nezuko-blood-moon-holo/web/index.html?rev=20260913-showcase2' },
-    { id: 'purple-lightning-moon', title: '紫电·月影', mode: 'holo', src: '../output/purple-lightning-moon-holo/web/index.html?rev=20260914-face-clear' },
-    { id: 'zhongli', title: '钟离', mode: 'holo', src: '../output/zhongli-geo-holo/web/index.html?rev=20260913-showcase2' },
+    { id: 'leo-pizza', title: '狮子座生日披萨', mode: 'holo', src: '../output/leo-birthday-pizza/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'eren', title: '艾伦少年 ⇄ 青年', mode: 'lenticular', src: '../output/eren-youth-adult-lenticular/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'jotaro', title: '承太郎四景', mode: 'lenticular', src: '../output/jotaro-four-view-lenticular/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'tokyo-ghoul', title: '东京喰种三相', mode: 'lenticular', src: '../output/tokyo-ghoul-triad-lenticular/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'gojo-geto', title: '五条 ⇄ 夏油', mode: 'lenticular', src: '../output/gojo-geto-lenticular/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'giyu-muichiro', title: '义勇 ⇄ 无一郎', mode: 'lenticular', src: '../output/giyu-muichiro-lenticular/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'tanjiro', title: '炭治郎三息', mode: 'lenticular', src: '../output/tanjiro-triad-lenticular/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'zenitsu', title: '善逸', mode: 'holo', src: '../output/zenitsu-thunderclap-holo/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'inosuke', title: '伊之助', mode: 'holo', src: '../output/inosuke-ruic-holo/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'kanao', title: '香奈乎', mode: 'holo', src: '../output/kanao-flower-breathing-holo/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'nezuko', title: '祢豆子', mode: 'holo', src: '../output/nezuko-blood-moon-holo/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'purple-lightning-moon', title: '紫电·月影', mode: 'holo', src: '../output/purple-lightning-moon-holo/web/index.html?rev=20260915-transparent-canvas' },
+    { id: 'zhongli', title: '钟离', mode: 'holo', src: '../output/zhongli-geo-holo/web/index.html?rev=20260915-transparent-canvas' },
   ];
 
   const frame = document.querySelector('#card-frame');
@@ -76,7 +76,7 @@
     if (frameDocument.querySelector('[data-gallery-showcase]')) return Promise.resolve();
     const stylesheet = frameDocument.createElement('link');
     stylesheet.rel = 'stylesheet';
-    stylesheet.href = new URL(`./showcase-${card.mode}.css?rev=20260913-showcase`, window.location.href).href;
+    stylesheet.href = new URL(`./showcase-${card.mode}.css?rev=20260914-transparent-canvas`, window.location.href).href;
     stylesheet.dataset.galleryShowcase = '';
     return new Promise((resolve) => {
       let finished = false;
@@ -90,26 +90,6 @@
       window.setTimeout(revealWhenReady, 600);
       frameDocument.head.append(stylesheet);
     });
-  };
-
-  const setShowcaseClearColor = () => {
-    const deadline = performance.now() + 2200;
-    const apply = () => {
-      const renderer = frame.contentWindow?.__holo?.renderer;
-      if (renderer?.setClearColor) renderer.setClearColor('#090719', 1);
-
-      const canvas = frame.contentDocument?.querySelector('canvas');
-      const context = canvas?.getContext('webgl2') || canvas?.getContext('webgl');
-      if (context && !canvas.dataset.showcaseClearColor) {
-        const clearColor = context.clearColor.bind(context);
-        context.clearColor = (_red, _green, _blue, alpha) => clearColor(0.035, 0.027, 0.098, alpha);
-        context.clearColor(0.035, 0.027, 0.098, 1);
-        canvas.dataset.showcaseClearColor = 'true';
-        return;
-      }
-      if (performance.now() < deadline) window.setTimeout(apply, 80);
-    };
-    apply();
   };
 
   const waitForCardRender = () => new Promise((resolve) => {
@@ -177,7 +157,6 @@
   frame.addEventListener('load', async () => {
     await applyFrameShowcase();
     await waitForCardRender();
-    setShowcaseClearColor();
     const revealLeoFront = await prepareLeoEntrance();
     frame.classList.add('is-ready');
     loading.classList.add('is-hidden');
