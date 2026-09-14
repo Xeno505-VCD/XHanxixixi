@@ -11,7 +11,7 @@ html, body { height: 100%; margin: 0; }
 body {
   min-height: 100%;
   overflow: hidden;
-  background: #080718 url("./assets/violet-starfield.png") center / 180% auto no-repeat;
+  background: #080718 url("./assets/violet-starfield.png") center / cover no-repeat;
 }
 
 button { font: inherit; }
@@ -76,10 +76,15 @@ button { font: inherit; }
   inset: 0;
   content: "";
   pointer-events: none;
-  background: url("./assets/violet-starfield.png") center / 180% auto no-repeat;
-  opacity: .96;
-  -webkit-mask-image: radial-gradient(ellipse 46% 74% at 50% 50%, transparent 0 43%, #000 70%);
-  mask-image: radial-gradient(ellipse 46% 74% at 50% 50%, transparent 0 43%, #000 70%);
+  background: url("./assets/violet-starfield.png") center / cover no-repeat;
+  opacity: .98;
+  -webkit-mask-image: radial-gradient(ellipse 35% 62% at 50% 50%, transparent 0 72%, #000 100%);
+  mask-image: radial-gradient(ellipse 35% 62% at 50% 50%, transparent 0 72%, #000 100%);
+}
+
+html[data-card-mode="lenticular"] .viewer::after {
+  -webkit-mask-image: radial-gradient(ellipse 58% 38% at 50% 50%, transparent 0 72%, #000 100%);
+  mask-image: radial-gradient(ellipse 58% 38% at 50% 50%, transparent 0 72%, #000 100%);
 }
 
 .frame-wrap {
@@ -90,7 +95,7 @@ button { font: inherit; }
   overflow: hidden;
   border: 0;
   border-radius: 0;
-  background: #080718 url("./assets/violet-starfield.png") center / 180% auto no-repeat;
+  background: #080718 url("./assets/violet-starfield.png") center / cover no-repeat;
   box-shadow: none;
 }
 
@@ -106,7 +111,7 @@ button { font: inherit; }
   color: #e9ddff;
   font-size: 13px;
   letter-spacing: .06em;
-  background: rgb(8 7 24 / 82%) url("./assets/violet-starfield.png") center / 180% auto no-repeat;
+  background: rgb(8 7 24 / 92%) url("./assets/violet-starfield.png") center / cover no-repeat;
   transition: opacity 160ms ease;
 }
 
@@ -193,8 +198,12 @@ button { font: inherit; }
     opacity: .96;
   }
   .viewer::after {
-    -webkit-mask-image: radial-gradient(ellipse 58% 66% at 50% 50%, transparent 0 44%, #000 74%);
-    mask-image: radial-gradient(ellipse 58% 66% at 50% 50%, transparent 0 44%, #000 74%);
+    -webkit-mask-image: radial-gradient(ellipse 44% 62% at 50% 50%, transparent 0 72%, #000 100%);
+    mask-image: radial-gradient(ellipse 44% 62% at 50% 50%, transparent 0 72%, #000 100%);
+  }
+  html[data-card-mode="lenticular"] .viewer::after {
+    -webkit-mask-image: radial-gradient(ellipse 70% 42% at 50% 50%, transparent 0 72%, #000 100%);
+    mask-image: radial-gradient(ellipse 70% 42% at 50% 50%, transparent 0 72%, #000 100%);
   }
   .navigation-previous { left: 10px; }
   .navigation-next { right: 10px; }

@@ -92,6 +92,43 @@
     });
   };
 
+  const setShowcaseClearColor = () => {
+    const deadline = performance.now() + 2200;
+    const apply = () => {
+      const renderer = frame.contentWindow?.__holo?.renderer;
+      if (renderer?.setClearColor) renderer.setClearColor('#090719', 1);
+
+      const canvas = frame.contentDocument?.querySelector('canvas');
+      const context = canvas?.getContext('webgl2') || canvas?.getContext('webgl');
+      if (context && !canvas.dataset.showcaseClearColor) {
+        const clearColor = context.clearColor.bind(context);
+        context.clearColor = (_red, _green, _blue, alpha) => clearColor(0.035, 0.027, 0.098, alpha);
+        context.clearColor(0.035, 0.027, 0.098, 1);
+        canvas.dataset.showcaseClearColor = 'true';
+        return;
+      }
+      if (performance.now() < deadline) window.setTimeout(apply, 80);
+    };
+    apply();
+  };
+
+  const waitForCardRender = () => new Promise((resolve) => {
+    const deadline = performance.now() + 5000;
+    const check = () => {
+      const frameDocument = frame.contentDocument;
+      if (frameDocument && !frameDocument.querySelector('#loading')) {
+        resolve();
+        return;
+      }
+      if (performance.now() >= deadline) {
+        resolve();
+        return;
+      }
+      window.setTimeout(check, 80);
+    };
+    check();
+  });
+
   const prepareLeoEntrance = () => new Promise((resolve) => {
     if (cards[activeIndex]?.id !== 'leo-pizza') {
       resolve(null);
@@ -125,6 +162,7 @@
     touchStart = null;
     title.textContent = card.title;
     position.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(cards.length).padStart(2, '0')}`;
+    document.documentElement.dataset.cardMode = card.mode;
     frame.title = `${card.title} 卡片`;
     previous.disabled = false;
     next.disabled = false;
@@ -138,6 +176,8 @@
   next.addEventListener('click', () => goTo(activeIndex + 1));
   frame.addEventListener('load', async () => {
     await applyFrameShowcase();
+    await waitForCardRender();
+    setShowcaseClearColor();
     const revealLeoFront = await prepareLeoEntrance();
     frame.classList.add('is-ready');
     loading.classList.add('is-hidden');
