@@ -1,0 +1,31 @@
+{
+  "mode": "lenticular-four-view",
+  "title": "空条承太郎 · 四景光栅",
+  "subtitle": "四幅完整卡面 · 四个观看角度",
+  "technique": "紫电 ⇄ 彩虹 ⇄ 都市 ⇄ 雷雨",
+  "tagline": "每一次倾斜，都是另一张完整画面",
+  "edition": "001 / 001",
+  "collection": "JOJO FAN ARCHIVE",
+  "description": "四张完整原画在一张实体光栅卡上随观看角度显现：紫电月夜、晴空虹光、都市锋芒、暴雨雷鸣依次显现。",
+  "font": "C:/Windows/Fonts/msyh.ttc",
+  "states": {
+    "a": {"label": "紫电月夜", "caption": "I · 第一视角"},
+    "b": {"label": "晴空虹光", "caption": "II · 第二视角"},
+    "c": {"label": "都市锋芒", "caption": "III · 第三视角"},
+    "d": {"label": "暴雨雷鸣", "caption": "IV · 第四视角"}
+  },
+  "lenticular": {
+    "flipAngle": 18,
+    "softness": 0.10,
+    "pitch": 132,
+    "stripe": 0.22,
+    "sweep": 4,
+    "refract": 0.28,
+    "ridge": 0.56,
+    "depth": 0.035,
+    "foil": 0.82,
+    "cycle": false
+  },
+  "effects": {"particles": 0.74, "glow": 0.58},
+  "identity": {"method": "Four user-supplied complete card artworks, preserved without alteration"}
+}

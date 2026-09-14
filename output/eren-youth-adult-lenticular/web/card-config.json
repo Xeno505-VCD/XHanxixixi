@@ -1,0 +1,46 @@
+{
+  "mode": "lenticular",
+  "title": "艾伦·耶格尔",
+  "subtitle": "少年 ⇄ 青年",
+  "technique": "自由之翼 · 终局宣言",
+  "tagline": "同一意志，两个年代",
+  "edition": "001 / 001",
+  "collection": "同人典藏",
+  "description": "完整少年与青年卡面会随观看角度在同一张光栅卡上切换：正视是火海中的冲锋，倾斜后是终局战场上的回眸。",
+  "font": "C:/Windows/Fonts/simkai.ttf",
+  "states": {
+    "a": {
+      "label": "少年 · 破壁之翼",
+      "caption": "火海冲锋"
+    },
+    "b": {
+      "label": "青年 · 终局回眸",
+      "caption": "末日决意"
+    }
+  },
+  "lenticular": {
+    "flipAngle": 16,
+    "softness": 0.18,
+    "pitch": 132,
+    "stripe": 0.2,
+    "sweep": 4,
+    "refract": 0.26,
+    "ridge": 0.56,
+    "depth": 0.035,
+    "foil": 0.8,
+    "cycle": false
+  },
+  "effects": {
+    "particles": 0.75,
+    "glow": 0.58
+  },
+  "identity": {
+    "method": "User-supplied complete card art preserved without alteration"
+  },
+  "assets": {
+    "model": "./assets/card.glb",
+    "imageA": "./assets/image_a.png",
+    "imageB": "./assets/image_b.png",
+    "text": "./assets/text.png"
+  }
+}

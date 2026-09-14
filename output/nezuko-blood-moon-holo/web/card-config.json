@@ -1,0 +1,36 @@
+{
+  "title": "NEZUKO KAMADO",
+  "subtitle": "AWAKENED DEMON",
+  "technique": "BLOOD DEMON ART",
+  "tagline": "Crimson Moon Berserk",
+  "edition": "001 / 001",
+  "collection": "FAN HOLOGRAPHIC ARCHIVE",
+  "description": "A non-official fan collectible card: awakened Nezuko surges through a ruined shrine beneath a crimson moon.",
+  "font": "C:/Windows/Fonts/georgia.ttf",
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "effects": "./assets/effects.png",
+    "model": "./assets/card.glb"
+  },
+  "parameters": {
+    "subjectScale": 1.07,
+    "subjectDepth": -0.45,
+    "backgroundDepth": 0.35,
+    "effectsScale": 1.04,
+    "effectsDepth": 0.9,
+    "foil": 0.76
+  },
+  "safeArea": {
+    "scale": 1.12,
+    "offset": [
+      0,
+      -0.045
+    ]
+  },
+  "appearance": {
+    "finish": "pearl"
+  }
+}

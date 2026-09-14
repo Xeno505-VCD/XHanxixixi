@@ -1,0 +1,52 @@
+{
+  "title": "狮子座生日披萨",
+  "subtitle": "LEO BIRTHDAY PIZZA",
+  "technique": "天天开心 · 心想事成",
+  "tagline": "愿每一口热气，都成为生日的闪光时刻",
+  "edition": "001 / 001",
+  "collection": "狮子座生日典藏",
+  "description": "明亮的漫画生日夜景里，披萨与小木凳形成第二层景深，祝福艺术字悬于最外层；翻转后展示金色狮子座星图。",
+  "sourceMode": "relief",
+  "font": "C:/Windows/Fonts/simkai.ttf",
+  "backImage": "./assets/back.png",
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "model": "./assets/card.glb"
+  },
+  "parameters": {
+    "subjectScale": 1.0,
+    "subjectDepth": 0.34,
+    "backgroundDepth": -0.22,
+    "effectsScale": 1.0,
+    "effectsDepth": 0.14,
+    "foil": 0.72
+  },
+  "layers": {
+    "subject": {
+      "width": 6.3,
+      "height": 9.45,
+      "depth": 0.34,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "text": {
+      "depth": 0.78
+    }
+  },
+  "safeArea": {
+    "scale": 1.0,
+    "offset": [
+      0,
+      0
+    ]
+  },
+  "appearance": {
+    "finish": "pearl",
+    "background": "#dfe7ff"
+  }
+}

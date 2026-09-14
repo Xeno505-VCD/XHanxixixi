@@ -1,0 +1,34 @@
+{
+  "title": "兽面 · 狂刃",
+  "subtitle": "山月之下",
+  "technique": "兽之呼吸",
+  "tagline": "双刃开山，猪突猛进",
+  "edition": "003 / 003",
+  "collection": "鬼杀珍藏",
+  "description": "伊之助的兽面突进：前景人物与战场背景分别悬浮，随鼠标或手机陀螺仪产生立体闪卡效果。",
+  "parameters": {
+    "subjectScale": 1.07,
+    "subjectDepth": -0.45,
+    "backgroundDepth": 0.35,
+    "effectsScale": 1.0,
+    "effectsDepth": 0.9,
+    "foil": 0.76
+  },
+  "safeArea": {
+    "scale": 1.08,
+    "offset": [
+      0,
+      -0.035
+    ]
+  },
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "model": "./assets/card.glb"
+  },
+  "appearance": {
+    "finish": "pearl"
+  }
+}

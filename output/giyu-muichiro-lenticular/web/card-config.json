@@ -1,0 +1,43 @@
+{
+  "mode": "lenticular",
+  "title": "水影 ⇄ 霞影",
+  "subtitle": "双图光栅收藏卡",
+  "technique": "富冈义勇 ⇄ 时透无一郎",
+  "tagline": "倾斜卡面，切换人物",
+  "edition": "002 / 002",
+  "collection": "水之呼吸",
+  "description": "两张完整人物卡面随观看角度切换。",
+  "states": {
+    "a": {
+      "label": "富冈义勇",
+      "caption": "深海"
+    },
+    "b": {
+      "label": "时透无一郎",
+      "caption": "雾青"
+    }
+  },
+  "lenticular": {
+    "flipAngle": 18,
+    "softness": 0.22,
+    "pitch": 120,
+    "stripe": 0.22,
+    "sweep": 4,
+    "refract": 0.3,
+    "ridge": 0.5,
+    "depth": 0.03,
+    "foil": 0.0,
+    "particles": 0.2,
+    "cycle": false
+  },
+  "effects": {
+    "particles": 0.2,
+    "glow": 0.25
+  },
+  "assets": {
+    "model": "./assets/card.glb",
+    "imageA": "./assets/image_a.png",
+    "imageB": "./assets/image_b.png",
+    "text": "./assets/text.png"
+  }
+}

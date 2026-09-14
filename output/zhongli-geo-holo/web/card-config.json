@@ -1,0 +1,36 @@
+{
+  "title": "钟离",
+  "subtitle": "ZHONGLI",
+  "technique": "岩耀·天星",
+  "tagline": "GEO DOMINION",
+  "edition": "EX · 001 / 001",
+  "collection": "个人全息典藏",
+  "description": "钟离于浮空岩阵间挥枪而出；人物、前景碎晶与群山分为独立景深，在倾斜时产生立体位移。",
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "effects": "./assets/effects.png",
+    "model": "./assets/card.glb"
+  },
+  "font": "C:/Windows/Fonts/simkai.ttf",
+  "parameters": {
+    "subjectScale": 1.07,
+    "subjectDepth": -0.45,
+    "backgroundDepth": 0.35,
+    "effectsScale": 1.02,
+    "effectsDepth": 0.9,
+    "foil": 0.76
+  },
+  "safeArea": {
+    "scale": 1.1,
+    "offset": [
+      0,
+      -0.045
+    ]
+  },
+  "appearance": {
+    "finish": "pearl"
+  }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080718" />
+    <title>卡片典藏</title>
+    <link rel="stylesheet" href="./style.css?rev=20260914-cosmic-loop2" />
+  </head>
+  <body>
+    <header class="archive-header">
+      <p class="archive-kicker">HOLO CARD ARCHIVE</p>
+      <div class="archive-heading">
+        <h1 id="card-name">载入卡片中</h1>
+        <p id="card-position" aria-live="polite">01 / 13</p>
+      </div>
+    </header>
+
+    <main class="archive-main">
+      <section class="viewer" aria-label="卡片浏览器">
+        <button class="navigation navigation-previous" id="previous" type="button" aria-label="上一张卡片">
+          <span aria-hidden="true">←</span><span class="navigation-label">上一张</span>
+        </button>
+        <div class="frame-wrap">
+          <div class="frame-loading" id="frame-loading" role="status">正在载入卡片…</div>
+          <iframe
+            id="card-frame"
+            title="当前卡片"
+            allow="fullscreen"
+            loading="eager"
+          ></iframe>
+        </div>
+        <button class="navigation navigation-next" id="next" type="button" aria-label="下一张卡片">
+          <span class="navigation-label">下一张</span><span aria-hidden="true">→</span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="archive-footer">
+      <p>保留每张卡原有的调节功能</p>
+      <p class="mobile-hint">在卡面空白处向左或向右滑动以切换</p>
+    </footer>
+
+    <script src="./app.js?rev=20260914-pages-path"></script>
+  </body>
+</html>

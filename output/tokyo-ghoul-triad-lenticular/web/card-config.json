@@ -1,0 +1,28 @@
+{
+  "mode": "lenticular-triad",
+  "title": "东京喰种 · 三相光栅",
+  "subtitle": "三幅完整卡面 · 倾斜切换",
+  "technique": "董香 · 金木",
+  "tagline": "正视、轻倾、深倾",
+  "edition": "001 / 001",
+  "collection": "TOKYO GHOUL",
+  "description": "三张完整原画按观看角度依次显现于同一张光栅收藏卡。",
+  "states": {
+    "a": {"label": "董香 · 夜翼", "caption": "形态 I · 正视"},
+    "b": {"label": "金木 · 赤赫", "caption": "形态 II · 轻倾"},
+    "c": {"label": "董香 · 咖啡", "caption": "形态 III · 深倾"}
+  },
+  "lenticular": {
+    "flipAngle": 16,
+    "softness": 0.18,
+    "pitch": 132,
+    "stripe": 0.20,
+    "sweep": 4,
+    "refract": 0.26,
+    "ridge": 0.56,
+    "depth": 0.035,
+    "foil": 0.80
+  },
+  "effects": {"particles": 0.75, "glow": 0.58},
+  "identity": {"method": "User-supplied complete card art preserved without alteration"}
+}

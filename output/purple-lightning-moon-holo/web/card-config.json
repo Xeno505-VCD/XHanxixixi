@@ -1,0 +1,59 @@
+{
+  "title": "紫电 · 月影",
+  "subtitle": "月下雷光",
+  "technique": "雷霆之刃",
+  "tagline": "一念凝锋，万雷归寂",
+  "edition": "004 / 004",
+  "collection": "个人雷光典藏",
+  "description": "月夜紫雷中的持刃武士：人物、飘落花瓣与远景雷云分层悬浮，随交互显出立体闪卡景深。",
+  "sourceMode": "relief",
+  "parameters": {
+    "subjectScale": 1.0,
+    "subjectDepth": 0.38,
+    "backgroundDepth": -0.24,
+    "effectsScale": 1.0,
+    "effectsDepth": 0.44,
+    "foil": 0.78
+  },
+  "layers": {
+    "subject": {
+      "width": 6.3,
+      "height": 9.45,
+      "depth": 0.38,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "effects": {
+      "width": 6.3,
+      "height": 9.45,
+      "depth": 0.44,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "text": {
+      "depth": 0.78
+    }
+  },
+  "safeArea": {
+    "scale": 1.0,
+    "offset": [
+      0,
+      0
+    ]
+  },
+  "assets": {
+    "subject": "./assets/subject.png?rev=20260913-exact-lightning",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "effects": "./assets/effects.png?rev=20260914-face-clear",
+    "model": "./assets/card.glb"
+  },
+  "appearance": {
+    "finish": "pearl"
+  }
+}

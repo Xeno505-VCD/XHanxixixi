@@ -1,0 +1,36 @@
+{
+  "title": "我妻善逸",
+  "subtitle": "ZENITSU AGATSUMA",
+  "technique": "雷之呼吸·壹之型",
+  "tagline": "霹雳一闪",
+  "edition": "001 / 001",
+  "collection": "同人全息典藏",
+  "description": "善逸在雷暴山道间凝神拔刀；人物、闪电与山岳被拆为独立景深，在倾斜时产生立体位移。",
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "effects": "./assets/effects.png",
+    "model": "./assets/card.glb"
+  },
+  "font": "C:/Windows/Fonts/simkai.ttf",
+  "parameters": {
+    "subjectScale": 1.07,
+    "subjectDepth": -0.45,
+    "backgroundDepth": 0.35,
+    "effectsScale": 1.03,
+    "effectsDepth": 0.9,
+    "foil": 0.76
+  },
+  "safeArea": {
+    "scale": 1.1,
+    "offset": [
+      0,
+      -0.045
+    ]
+  },
+  "appearance": {
+    "finish": "pearl"
+  }
+}

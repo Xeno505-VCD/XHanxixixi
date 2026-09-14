@@ -1,0 +1,36 @@
+{
+  "title": "栗花落香奈乎",
+  "subtitle": "KANAO TSUYURI",
+  "technique": "花之呼吸・终之型",
+  "tagline": "彼岸朱眼",
+  "edition": "001 / 001",
+  "collection": "个人全息典藏",
+  "description": "月下藤园中，香奈乎以花之呼吸施展凌空斩击；人物、花瓣与庭园被拆为独立景深。",
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png?rev=20260914-separator",
+    "lineart": "./assets/lineart.png",
+    "effects": "./assets/effects.png",
+    "model": "./assets/card.glb"
+  },
+  "font": "C:/Windows/Fonts/simkai.ttf",
+  "parameters": {
+    "subjectScale": 1.07,
+    "subjectDepth": -0.45,
+    "backgroundDepth": 0.35,
+    "effectsScale": 1.0,
+    "effectsDepth": 0.9,
+    "foil": 0.76
+  },
+  "safeArea": {
+    "scale": 1.1,
+    "offset": [
+      0,
+      -0.04
+    ]
+  },
+  "appearance": {
+    "finish": "pearl"
+  }
+}

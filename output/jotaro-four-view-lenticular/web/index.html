@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>四景光栅 · 收藏卡</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head>
+<body>
+  <header><a class="brand" href="#">HOLO CARD STUDIO</a><button id="compare">查看四幅原画</button></header>
+  <main>
+    <section id="stage" tabindex="0" aria-label="拖动卡片查看四态光栅变化"><div id="loading">载入四景卡面…</div><div class="hint">左右拖动：紫电 → 晴空 → 都市 → 暴雨</div></section>
+    <aside>
+      <p class="eyebrow">FOUR-VIEW LENTICULAR</p><h1 id="card-title">空条承太郎 · 四景光栅</h1><p id="card-description" class="intro"></p>
+      <div class="states" aria-label="选择卡片画面"><button id="state-d">暴雨雷鸣</button><button id="state-c">都市锋芒</button><button id="state-b">晴空虹光</button><button id="state-a">紫电月夜</button></div>
+      <label>转动 <output id="angleValue">0°</output><input id="angle" type="range" min="-45" max="45" step="0.5" value="0"></label>
+      <div class="toolbar"><button id="reset">复位</button><button id="auto">自动</button><button id="back">背面</button><button id="save">保存</button></div>
+      <div class="effects"><h2>光效</h2><label>镭射 <output id="foilValue"></output><input id="foil" type="range" min="0" max="1" step="0.01"></label><label>粒子 <output id="particlesValue"></output><input id="particles" type="range" min="0" max="1" step="0.01"></label><button id="effects-off">关闭光效</button></div>
+      <p class="note">四幅完整原画 · 全幅切换<br>实体卡基 · 柱镜折射 · 镭射膜</p>
+    </aside>
+  </main>
+  <footer><span id="card-edition">JOJO FAN ARCHIVE / 001</span><span>← → 转动　F 翻面　R 复位</span></footer>
+  <dialog id="comparison"><button id="close-compare">关闭</button><div class="pair quad"><figure><img src="assets/image_d.png" alt="暴雨雷鸣原画"><figcaption>强左倾 · 暴雨雷鸣</figcaption></figure><figure><img src="assets/image_c.png" alt="都市锋芒原画"><figcaption>左倾 · 都市锋芒</figcaption></figure><figure><img src="assets/image_b.png" alt="晴空虹光原画"><figcaption>右倾 · 晴空虹光</figcaption></figure><figure><img src="assets/image_a.png" alt="紫电月夜原画"><figcaption>强右倾 · 紫电月夜</figcaption></figure></div></dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

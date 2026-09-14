@@ -1,0 +1,50 @@
+{
+  "mode": "lenticular-triad",
+  "title": "炭治郎 · 三息光栅",
+  "subtitle": "三幅完整卡面 · 倾斜切换",
+  "technique": "水之呼吸 ⇄ 日之呼吸",
+  "tagline": "正视 · 水火合一",
+  "edition": "001 / 001",
+  "collection": "DEMON SLAYER FAN ARCHIVE",
+  "description": "三张完整炭治郎原画随卡面角度显现：正视水火合一，左倾水之呼吸，右倾日之呼吸。",
+  "font": "C:/Windows/Fonts/msyh.ttc",
+  "states": {
+    "a": {
+      "label": "水火合一",
+      "caption": "形态 I · 正视"
+    },
+    "b": {
+      "label": "水之呼吸",
+      "caption": "形态 II · 左倾"
+    },
+    "c": {
+      "label": "日之呼吸",
+      "caption": "形态 III · 右倾"
+    }
+  },
+  "lenticular": {
+    "flipAngle": 16,
+    "softness": 0.18,
+    "pitch": 132,
+    "stripe": 0.22,
+    "sweep": 4,
+    "refract": 0.26,
+    "ridge": 0.56,
+    "depth": 0.035,
+    "foil": 0.78
+  },
+  "effects": {
+    "particles": 0.76,
+    "glow": 0.6
+  },
+  "identity": {
+    "method": "User-supplied complete card art preserved without alteration"
+  },
+  "assets": {
+    "model": "./assets/card.glb",
+    "imageA": "./assets/image_a.png",
+    "imageB": "./assets/image_b.png",
+    "imageC": "./assets/image_c.png",
+    "text": "./assets/text.png"
+  }
+}

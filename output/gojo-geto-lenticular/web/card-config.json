@@ -1,0 +1,34 @@
+{
+  "mode": "lenticular",
+  "title": "苍瞳 ⇄ 咒灵",
+  "subtitle": "双图光栅收藏卡",
+  "technique": "五条悟 ⇄ 夏油杰",
+  "tagline": "倾斜卡面，切换人物",
+  "edition": "001 / 001",
+  "collection": "角色对峙",
+  "description": "两张完整人物卡面随观看角度切换。",
+  "states": {
+    "a": { "label": "五条悟", "caption": "冰蓝" },
+    "b": { "label": "夏油杰", "caption": "紫金" }
+  },
+  "lenticular": {
+    "flipAngle": 18,
+    "softness": 0.22,
+    "pitch": 120,
+    "stripe": 0.22,
+    "sweep": 4,
+    "refract": 0.3,
+    "ridge": 0.5,
+    "depth": 0.03,
+    "foil": 0.0,
+    "particles": 0.20,
+    "cycle": false
+  },
+  "effects": { "particles": 0.20, "glow": 0.25 },
+  "assets": {
+    "model": "./assets/card.glb",
+    "imageA": "./assets/image_a.png",
+    "imageB": "./assets/image_b.png",
+    "text": "./assets/text.png"
+  }
+}
