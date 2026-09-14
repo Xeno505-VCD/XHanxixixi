@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#080718" />
     <title>卡片典藏</title>
-    <link rel="stylesheet" href="./style.css?rev=20260914-nebula-clean" />
+    <link rel="stylesheet" href="./style.css?rev=20260914-nebula-frame" />
   </head>
   <body>
     <header class="archive-header">
@@ -22,7 +22,11 @@
           <span aria-hidden="true">←</span><span class="navigation-label">上一张</span>
         </button>
         <div class="frame-wrap">
-          <div class="frame-loading" id="frame-loading" role="status">正在载入卡片…</div>
+          <div class="frame-loading" id="frame-loading" role="status">
+            <span class="loading-sigil" aria-hidden="true">✦</span>
+            <span>星图校准中</span>
+            <small>ARCHIVE AWAKENING</small>
+          </div>
           <iframe
             id="card-frame"
             title="当前卡片"
